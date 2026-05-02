@@ -1,9 +1,0 @@
-cff-version: 1.2.0
-title: "OMM-SBT: A 4D Causal-Kinetic Framework for Emergent Physical Laws"
-message: "If you use this repository, please cite the manuscript or this repository."
-authors:
-  - family-names: "Roux"
-    given-names: "Nicolas Gilbert Albert"
-version: "0.1.0"
-date-released: "2026-05-02"
-license: "MIT"
