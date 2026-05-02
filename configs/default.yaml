@@ -1,0 +1,17 @@
+size: 64
+steps: 100
+families:
+  - compact
+  - dipole
+  - ring
+  - mixed
+parameters:
+  D: 0.16
+  gamma: 0.008
+  lam: 0.030
+  mu: 0.020
+  alpha_phase: 0.060
+  beta_vorticity: 0.040
+  kappa_kinetic: 0.120
+  delta_kinetic: 0.018
+  feedback: 0.040

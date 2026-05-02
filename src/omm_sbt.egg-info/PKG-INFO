@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: omm-sbt
+Version: 0.1.0
+Summary: Reference implementation of the OMM-SBT causal-kinetic framework
+Author: Nicolas Gilbert Albert Roux
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: numpy>=1.23
+Requires-Dist: pandas>=1.5
+Requires-Dist: matplotlib>=3.7
+Requires-Dist: pyyaml>=6.0
+Dynamic: license-file
