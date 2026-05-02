@@ -1,0 +1,2888 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,graphicx}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{caption}
+\geometry{margin=1in}
+
+\title{OMM--SBT: A 4D Causal-Kinetic Framework for Emergent Physical Laws}
+
+\subtitle{Diffuse Interaction Rings (DIR) and Emergent Matter Structures}
+
+\author{
+Nicolas Gilbert Albert Roux
+}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+We introduce the Oscillatory Mantle Model -- Substantial Beating Theory (OMM--SBT), a 4D causal-kinetic framework in which physical laws emerge from the dynamics of a unified oscillatory substrate.
+
+The model is based on the coupled evolution of an amplitude field $X$, a phase field $\Phi$, and a kinetic field $K$, incorporating diffusion, nonlinear saturation, flux structuring, and feedback mechanisms. Within this formulation, particles, interactions, geometry, and thermodynamic behavior are not assumed as fundamental entities, but arise as emergent structures of the underlying field dynamics.
+
+We show that the framework reproduces multiple physical sectors as effective limits, including Schrödinger-like wave behavior, Maxwell-like flux propagation, Dirac/Pauli-like vorticity structures, Einstein-like effective geometry, and Hawking-like boundary radiation. These results are supported by progressive numerical calibration, strong invariance properties, and independent reproduction of the core dynamics.
+
+A key feature of the model is the emergence of diffuse interaction regions, where localized energetic stabilizations give rise to particle-like behavior. In this interpretation, matter corresponds to stable patterns within interaction structures rather than primitive objects.
+
+The framework also introduces a generalized continuity equation with a non-zero source term, reflecting global constraints and feedback processes within the substrate. This leads to a unified perspective on non-equilibrium thermodynamics and radiation phenomena.
+
+While several aspects remain to be formally completed, including analytic closure, rigorous quantization, and strict Lorentz invariance, the results support the interpretation of OMM--SBT as a coherent and testable candidate for emergent physical unification.
+
+\end{abstract}
+
+\section{Introduction}
+
+Modern theoretical physics is structured around two major frameworks: quantum field theory, which successfully describes microscopic interactions, and general relativity, which governs gravitational phenomena and spacetime geometry. Despite their respective successes, these frameworks remain formally incompatible in extreme regimes.
+
+Numerous approaches to unification have been proposed, including higher-dimensional theories such as string theory and M-theory. These models introduce extended mathematical structures but often rely on additional spatial dimensions and lack direct experimental validation.
+
+In this work, we propose an alternative approach based on a causal-kinetic substrate framework. Instead of introducing new dimensions or fundamental particles, we consider that physical laws emerge from a unified dynamical system defined on a finite, constrained substrate.
+
+The core hypothesis is that physical structure is not fundamental, but emergent. Observable phenomena arise from the interaction between:
+\begin{itemize}
+\item an amplitude field $X$, representing the underlying field-mantle,
+\item a phase/orientation field $\Phi$, encoding directional structure,
+\item and a kinetic field $K$, representing accumulated dynamical activity and feedback.
+\end{itemize}
+
+A central feature of this framework is the presence of a feedback loop in which consequences (flux, curvature, radiation) dynamically influence the substrate itself, thereby becoming renewed effective causes.
+
+This leads to a generalized non-equilibrium structure in which local conservation laws are modified by global constraints and feedback processes.
+
+We show that multiple physical sectors—including Schrödinger-like, Dirac-like, Maxwell-like, Einstein-like, thermodynamic, Hawking-like, and extended (string-like) behaviors—emerge as limits of the same underlying dynamics.
+
+Unlike higher-dimensional unification theories, the present framework operates entirely in an effective 3+1 dimensional setting. Higher-order structures arise as kinetic consequences rather than additional spatial dimensions.
+
+The model is supported by numerical calibration, invariance analysis, and independent reproduction, and is presented here as a serious candidate for emergent physical unification.
+
+The goal of this paper is to provide a complete formal description of the framework, its equations, its physical interpretations, and its testable predictions.
+
+\section{Positioning with Respect to Existing Theoretical Frameworks}
+
+The search for a unified description of physical laws has led to the development of several major theoretical frameworks. Among them, quantum field theory (QFT) and general relativity (GR) constitute the current foundations of modern physics. While QFT provides an accurate description of particle interactions and gauge symmetries, GR successfully models gravitational phenomena through spacetime curvature.
+
+However, these frameworks remain formally incompatible in regimes where both quantum and gravitational effects are significant. This has motivated the exploration of various unification approaches.
+
+\subsection{Relation to Quantum Field Theory}
+
+Quantum field theory is built upon operator-valued fields defined over spacetime, with dynamics governed by Lagrangian or Hamiltonian formulations and quantization procedures. In contrast, the present framework does not begin with quantized operators but with a dynamical substrate described by real-valued fields $(X, \Phi, K)$.
+
+Quantum-like behavior emerges in this model as a consequence of:
+\begin{itemize}
+\item spectral mode structures,
+\item interference patterns arising from phase dynamics,
+\item and effective probabilistic distributions linked to the substrate's kinetic state.
+\end{itemize}
+
+Thus, rather than assuming quantization as a fundamental principle, the model treats it as an emergent property of underlying field dynamics.
+
+\subsection{Relation to General Relativity}
+
+General relativity describes gravity as a geometric property of spacetime, encoded in the metric tensor $g_{\mu\nu}$. In the present framework, no fundamental spacetime geometry is assumed.
+
+Instead, an \emph{effective metric} $g_{\mathrm{eff}}$ emerges from the structure of the substrate through local quantities such as:
+\begin{itemize}
+\item density-like measures,
+\item gradients and Laplacians of the field $X$,
+\item flux structures,
+\item and kinetic activity.
+\end{itemize}
+
+This leads to curvature-like effects that reproduce gravitational behavior as a consequence of field organization rather than as a primitive geometric postulate.
+
+\subsection{Relation to String Theory and Higher-Dimensional Models}
+
+String theory and M-theory attempt unification by introducing extended objects (strings, branes) and additional spatial dimensions. While mathematically rich, these models rely on structures that have not yet been experimentally observed.
+
+In contrast, the present framework remains strictly four-dimensional (3+1). Extended structures do appear, but they are interpreted as:
+\begin{itemize}
+\item coherent low-frequency modes,
+\item extended dynamical patterns,
+\item or kinetic consequences of the substrate,
+\end{itemize}
+rather than fundamental higher-dimensional objects.
+
+Thus, the model provides an alternative interpretation of string-like behavior without requiring extra spatial dimensions.
+
+\subsection{Relation to Thermodynamics and Non-Equilibrium Systems}
+
+Unlike equilibrium-based formulations, the proposed framework is intrinsically non-equilibrium. The presence of a kinetic field $K$ and feedback mechanisms introduces:
+
+\begin{itemize}
+\item persistent energy circulation,
+\item entropy production,
+\item and dynamical steady states.
+\end{itemize}
+
+This aligns the model with modern approaches in non-equilibrium statistical physics, where structure and order emerge from driven systems.
+
+\subsection{Conceptual Shift: From Objects to Processes}
+
+A key conceptual difference between this framework and most existing theories lies in its ontology.
+
+Standard approaches typically assume:
+\begin{itemize}
+\item particles or fields as fundamental entities,
+\item and interactions as secondary processes.
+\end{itemize}
+
+In contrast, the present model adopts a process-based ontology:
+\begin{itemize}
+\item the substrate dynamics is primary,
+\item structures (particles, fields, geometry) are emergent,
+\item and physical laws correspond to stable dynamical regimes.
+\end{itemize}
+
+This shift is consistent with several modern perspectives in theoretical physics, where emergence plays a central role.
+
+\subsection{Summary of Positioning}
+
+The framework proposed here can be summarized as follows:
+
+\begin{itemize}
+\item It reproduces quantum-like, relativistic, and thermodynamic behaviors as emergent limits.
+\item It avoids introducing extra spatial dimensions.
+\item It incorporates feedback as a fundamental mechanism.
+\item It treats conservation laws as generalized constraints rather than strict local equalities.
+\item It is supported by numerical calibration and independent reproduction.
+\end{itemize}
+
+As such, it should not be viewed as a replacement of existing theories, but rather as a candidate underlying structure from which they may arise as effective descriptions.
+
+\section{Axiomatic Foundations of the OMM--SBT Framework}
+
+The Oscillatory Mantle Model -- Substantial Beating Theory (OMM--SBT) is built upon a minimal set of axioms that define its ontology, dynamics, and interpretative structure. These axioms are not postulated arbitrarily, but are motivated by the requirement of reproducing known physical behaviors while maintaining conceptual coherence and minimality.
+
+\subsection{Axiom A1: Fundamental Oscillatory Excitation}
+
+The substrate is intrinsically dynamic. A fundamental oscillatory process drives its evolution.
+
+\begin{equation}
+\text{Primary cause: oscillatory excitation of the substrate}
+\end{equation}
+
+This oscillation is not imposed externally but is a defining property of the system. It generates continuous fluctuations that act as the origin of all subsequent structure.
+
+\subsection{Axiom A2: Finite and Constrained Substrate}
+
+The substrate is globally constrained and effectively finite.
+
+\begin{equation}
+\|X\|^2 \approx 1 \quad \text{(global normalization constraint)}
+\end{equation}
+
+This constraint introduces non-trivial global effects:
+\begin{itemize}
+\item boundary-like behaviors,
+\item effective horizons,
+\item and non-local correlations.
+\end{itemize}
+
+Local dynamics must therefore be understood as embedded within a globally constrained system.
+
+\subsection{Axiom A3: Field-Mantle Ontology}
+
+The fundamental entity is not a particle but a continuous field structure:
+
+\begin{equation}
+X(x,t) \in \mathbb{R}
+\end{equation}
+
+This field represents an amplitude-like quantity forming a \emph{mantle} from which observable structures emerge. Particles, fields, and localized objects are interpreted as stable patterns within this mantle.
+
+\subsection{Axiom A4: Phase and Orientation}
+
+A phase field encodes local orientation and directional information:
+
+\begin{equation}
+\Phi(x,t) \in \mathbb{R}
+\end{equation}
+
+Gradients of this phase define preferred directions and give rise to structured propagation phenomena. The phase is essential for interference, coherence, and directional coupling.
+
+\subsection{Axiom A5: Substrate Kinetics}
+
+A kinetic field $K(x,t)$ represents accumulated dynamical activity within the substrate:
+
+\begin{equation}
+K(x,t) \geq 0
+\end{equation}
+
+This quantity encodes:
+\begin{itemize}
+\item local agitation,
+\item memory of past dynamics,
+\item and energy redistribution processes.
+\end{itemize}
+
+It plays a central role in thermodynamic behavior and feedback mechanisms.
+
+\subsection{Axiom A6: Feedback of Consequences}
+
+A defining feature of the framework is the existence of a feedback loop:
+
+\begin{equation}
+\text{Consequences} \rightarrow \text{Substrate} \rightarrow \text{New consequences}
+\end{equation}
+
+Fluxes, curvature-like effects, and boundary phenomena contribute to the evolution of $K$, which in turn modifies the dynamics of $X$ and $\Phi$. This creates a causal loop in which effects become renewed causes.
+
+\subsection{Axiom A7: Four-Dimensional Sufficiency}
+
+The framework operates in an effective 3+1 dimensional setting:
+
+\begin{equation}
+(x,t) \in \mathbb{R}^3 \times \mathbb{R}
+\end{equation}
+
+No additional spatial dimensions are introduced. Higher-order structures arise as dynamical or kinetic phenomena rather than geometric dimensions.
+
+\subsection{Axiom A8: Emergent Physical Sectors}
+
+All physical sectors are interpreted as emergent regimes of the same underlying system.
+
+\begin{equation}
+\text{Physical laws} = \text{stable dynamical limits of } (X, \Phi, K)
+\end{equation}
+
+This includes:
+\begin{itemize}
+\item wave-like dynamics (Schrödinger-like),
+\item spinor and chirality effects (Dirac-like),
+\item flux-based interactions (Maxwell-like),
+\item curvature and geometry (Einstein-like),
+\item thermodynamic behavior,
+\item and boundary radiation phenomena (Hawking-like).
+\end{itemize}
+
+\subsection{Interpretative Summary}
+
+Taken together, these axioms define a framework in which:
+\begin{itemize}
+\item the substrate dynamics is fundamental,
+\item observable structures are emergent,
+\item conservation laws are generalized,
+\item and causality includes feedback processes.
+\end{itemize}
+
+The remainder of this work develops the mathematical formalism and demonstrates how known physical behaviors arise from these principles.
+
+\section{Fundamental Variables and Derived Quantities}
+
+The OMM--SBT framework is defined by three primary dynamical variables:
+\[
+\Psi_t = (X_t,\Phi_t,K_t).
+\]
+
+Here, $\Psi_t$ denotes the full state of the system at time $t$. The three components $X_t$, $\Phi_t$, and $K_t$ respectively describe the field-mantle amplitude, the internal phase/orientation, and the kinetic state of the substrate.
+
+\subsection{Field-Mantle Amplitude}
+
+The first fundamental variable is the field-mantle amplitude:
+\[
+X = X(x,t).
+\]
+
+The variable $x$ denotes position in space and $t$ denotes time. In the discrete numerical implementation, $x$ corresponds to a lattice site and $t$ to an iteration step.
+
+The field $X$ is not interpreted as a particle field in the usual sense. Rather, it represents the underlying mantle from which localized structures, effective particles, fluxes, and geometrical deformations may emerge.
+
+A global normalization constraint is imposed:
+\[
+\|X\|^2 \approx 1.
+\]
+
+This expresses the finite and constrained character of the substrate. It also implies that local variations of $X$ cannot be interpreted independently of the global state of the system.
+
+\subsection{Phase and Orientation Field}
+
+The second fundamental variable is the phase field:
+\[
+\Phi = \Phi(x,t).
+\]
+
+The phase field encodes orientation, internal directionality, and coherence. Its spatial gradient defines preferred directions of propagation:
+\[
+\nabla \Phi.
+\]
+
+The phase field is therefore responsible for wave-like organization, interference-like behavior, and directional coupling.
+
+\subsection{Substrate Kinetic Field}
+
+The third fundamental variable is the kinetic field:
+\[
+K = K(x,t), \qquad K \geq 0.
+\]
+
+The field $K$ represents the local kinetic activity of the substrate. It stores the accumulated effect of fluxes, vorticity, boundary activity, and feedback. In this sense, $K$ is not merely a temperature-like variable, but a memory-bearing kinetic reservoir.
+
+It plays a central role in thermodynamic behavior and in the feedback loop:
+\[
+\text{consequences} \rightarrow K \rightarrow \text{new effective causes}.
+\]
+
+\subsection{Effective Density}
+
+From the field-mantle and kinetic field, we define an effective density:
+\[
+\rho_{\rm eff} = X^2 + \alpha_K K.
+\]
+
+The coefficient $\alpha_K$ controls the contribution of substrate kinetics to the effective density.
+
+This construction reflects the fact that density is not purely amplitude-based in OMM--SBT. Since kinetic feedback modifies the substrate, the effective density must include both field intensity and kinetic activity.
+
+\subsection{Flux Skeleton}
+
+The fundamental flux is defined by:
+\[
+J = |X| \nabla \Phi.
+\]
+
+Each symbol has a specific meaning:
+\begin{itemize}
+\item $|X|$ measures the local amplitude of the field-mantle;
+\item $\nabla \Phi$ measures the local phase gradient;
+\item $J$ is therefore the amplitude-weighted directional flow.
+\end{itemize}
+
+This quantity is called the flux skeleton because it provides the common structure from which Maxwell-like propagation, transport, and sectoral pathways emerge.
+
+\subsection{Vorticity and Chirality}
+
+From the flux $J$, we define the vorticity:
+\[
+W = \nabla \times J.
+\]
+
+In two-dimensional numerical simulations, this corresponds to the scalar curl of the flux field. In three spatial dimensions, $W$ becomes a vector field.
+
+The vorticity measures local circulation of the flux skeleton. It is associated with:
+\begin{itemize}
+\item chiral structures,
+\item spinor-like behavior,
+\item local rotational organization,
+\item and Dirac/Pauli-like sector emergence.
+\end{itemize}
+
+\subsection{Curvature Proxy}
+
+We define a curvature-like scalar from the Laplacian of the field:
+\[
+C = |\nabla^2 X|.
+\]
+
+The Laplacian measures local deviation from harmonic smoothness. Regions of high $C$ correspond to strong deformation of the mantle.
+
+This quantity contributes to effective geometry and is used in the construction of the emergent metric.
+
+\subsection{Effective Metric}
+
+The effective metric proxy is defined as:
+\[
+g_{\rm eff}
+=
+1
++ a\rho_{\rm eff}
++ b|\nabla^2 X|
++ c|W|
++ d|J|
++ eK.
+\]
+
+The coefficients $a,b,c,d,e$ determine the relative contribution of density, curvature, vorticity, flux, and kinetic activity.
+
+This expression should not be understood as a complete replacement for the relativistic metric tensor $g_{\mu\nu}$. Rather, it defines the scalar effective geometry used in the present stage of the model. A full tensorial formulation remains a later analytic extension.
+
+\subsection{Effective Horizon}
+
+A horizon-like boundary is defined by thresholding the effective metric:
+\[
+H = \{x \mid g_{\rm eff}(x) > q_\theta(g_{\rm eff})\},
+\]
+where $q_\theta$ is a quantile threshold.
+
+This construction identifies regions where the effective geometry becomes extreme relative to the global substrate. Such regions behave as finite-size causal boundaries and support Hawking-like or radiation-like behavior.
+
+\subsection{Radiation Proxy}
+
+A radiation-like field is constructed from boundary, flux, vorticity, and curvature activity:
+\[
+R = R(H,J,W,C).
+\]
+
+A typical form is:
+\[
+R =
+\eta_H H
++ \eta_J \tanh\left(\frac{|J|}{\langle |J| \rangle}\right)
++ \eta_W \tanh\left(\frac{|W|}{\langle |W| \rangle}\right)
++ \eta_C \tanh\left(\frac{C}{\langle C \rangle}\right).
+\]
+
+Here:
+\begin{itemize}
+\item $H$ contributes boundary activity;
+\item $J$ contributes flux intensity;
+\item $W$ contributes rotational activity;
+\item $C$ contributes mantle deformation.
+\end{itemize}
+
+The coefficients $\eta_H,\eta_J,\eta_W,\eta_C$ weight these contributions.
+
+\subsection{Summary of Variables}
+
+The fundamental and derived quantities are summarized as follows:
+
+\[
+\Psi_t = (X_t,\Phi_t,K_t)
+\]
+
+\[
+\rho_{\rm eff} = X^2 + \alpha_K K
+\]
+
+\[
+J = |X|\nabla\Phi
+\]
+
+\[
+W = \nabla \times J
+\]
+
+\[
+C = |\nabla^2X|
+\]
+
+\[
+g_{\rm eff}=1+a\rho_{\rm eff}+bC+c|W|+d|J|+eK
+\]
+
+\[
+H=\{g_{\rm eff}>q_\theta(g_{\rm eff})\}
+\]
+
+\[
+R=R(H,J,W,C)
+\]
+
+Together, these variables form the mathematical basis of the OMM--SBT framework. The following section introduces their time evolution and the dynamical laws governing the model.
+
+\section{Dynamical Equations of the OMM--SBT Framework}
+
+The dynamics of the OMM--SBT framework are governed by the coupled evolution of the three fundamental fields:
+\[
+\Psi_t = (X_t,\Phi_t,K_t).
+\]
+
+The evolution is discrete in time for numerical implementation, but admits a continuous interpretation in the limit $\Delta t \to 0$.
+
+\subsection{General Structure of the Dynamics}
+
+The evolution follows the general structure:
+\begin{equation}
+\Psi_{t+1} = \mathcal{F}(\Psi_t),
+\end{equation}
+where $\mathcal{F}$ is a nonlinear operator encoding diffusion, dissipation, nonlinear saturation, flux interactions, and feedback.
+
+Each component of $\Psi_t$ evolves according to its own equation, coupled to the others.
+
+\subsection{Evolution of the Field-Mantle Amplitude $X$}
+
+The amplitude field evolves according to:
+\begin{equation}
+X_{t+1}
+=
+\mathcal{N}
+\left[
+X_t
++ D \nabla^2 X_t
+- \gamma X_t
+- \lambda X_t^3
++ C_{\rm flux}
++ C_{\rm finite}
++ \eta_t
+\right].
+\end{equation}
+
+Each term has a precise role:
+
+\begin{itemize}
+\item $X_t$ : persistence of the field from one step to the next.
+\item $D \nabla^2 X_t$ : diffusion term, responsible for spatial propagation and smoothing.
+\item $-\gamma X_t$ : dissipation, representing energy loss or relaxation.
+\item $-\lambda X_t^3$ : nonlinear saturation, preventing divergence and creating attractors.
+\item $C_{\rm flux}$ : coupling to flux structures (derived from $J$).
+\item $C_{\rm finite}$ : global constraint term enforcing finite substrate behavior.
+\item $\eta_t$ : fluctuation/noise term, representing intrinsic excitation.
+\item $\mathcal{N}[\cdot]$ : normalization operator enforcing $\|X\|^2 \approx 1$.
+\end{itemize}
+
+A typical form of the finite constraint term is:
+\begin{equation}
+C_{\rm finite} = -\mu \left(\|X_t\|^2 - 1\right) X_t.
+\end{equation}
+
+\subsection{Evolution of the Phase Field $\Phi$}
+
+The phase evolves according to:
+\begin{equation}
+\Phi_{t+1}
+=
+\Phi_t
++ \alpha \nabla^2 \Phi_t
++ \beta W_t
++ C_{\rm orient}.
+\end{equation}
+
+The terms are interpreted as follows:
+
+\begin{itemize}
+\item $\Phi_t$ : phase persistence.
+\item $\alpha \nabla^2 \Phi_t$ : phase diffusion, promoting coherence.
+\item $\beta W_t$ : coupling to vorticity, introducing rotational/chiral structure.
+\item $C_{\rm orient}$ : additional orientation coupling (e.g., nonlinear phase effects).
+\end{itemize}
+
+This equation is responsible for the emergence of directional structures and interference-like phenomena.
+
+\subsection{Evolution of the Kinetic Field $K$}
+
+The kinetic field evolves according to:
+\begin{equation}
+K_{t+1}
+=
+K_t
++ \kappa \nabla^2 K_t
+- \delta K_t
++ P(J_t, W_t, H_t, R_t).
+\end{equation}
+
+Where:
+
+\begin{itemize}
+\item $K_t$ : persistence of kinetic activity.
+\item $\kappa \nabla^2 K_t$ : diffusion of kinetic energy across the substrate.
+\item $-\delta K_t$ : relaxation or dissipation of kinetic activity.
+\item $P(\cdot)$ : production term, encoding feedback from dynamical consequences.
+\end{itemize}
+
+The production term typically takes the form:
+\begin{equation}
+P = \xi_J |J| + \xi_W |W| + \xi_H H + \xi_R R.
+\end{equation}
+
+This expresses the central principle of OMM--SBT:
+\[
+\text{consequences feed back into the substrate}.
+\]
+
+\subsection{Flux Coupling Term}
+
+The coupling between $X$ and the flux structure is expressed through:
+\begin{equation}
+C_{\rm flux} = \chi \, \nabla \cdot J,
+\end{equation}
+or more generally:
+\begin{equation}
+C_{\rm flux} = \chi_1 |J| + \chi_2 \nabla \cdot J.
+\end{equation}
+
+This term allows propagation structures to influence the amplitude field.
+
+\subsection{Minimal Core Equation}
+
+A simplified version of the model, capturing its essential behavior, is given by:
+\begin{equation}
+X_{t+1}
+=
+X_t
++ D \nabla^2 X_t
+- \gamma X_t
+- \lambda X_t^3.
+\end{equation}
+
+This minimal equation already produces:
+\begin{itemize}
+\item wave-like behavior,
+\item mode formation,
+\item and stable structures.
+\end{itemize}
+
+However, it does not include:
+\begin{itemize}
+\item phase dynamics,
+\item feedback,
+\item geometry,
+\item or thermodynamics.
+\end{itemize}
+
+\subsection{Continuous Limit}
+
+In the continuous-time limit, the evolution equations take the form:
+\begin{equation}
+\partial_t X
+=
+D \nabla^2 X
+- \gamma X
+- \lambda X^3
++ C_{\rm flux}
++ C_{\rm finite}
++ \eta,
+\end{equation}
+
+\begin{equation}
+\partial_t \Phi
+=
+\alpha \nabla^2 \Phi
++ \beta W
++ C_{\rm orient},
+\end{equation}
+
+\begin{equation}
+\partial_t K
+=
+\kappa \nabla^2 K
+- \delta K
++ P(J,W,H,R).
+\end{equation}
+
+\subsection{Interpretative Summary}
+
+The dynamics of the OMM--SBT framework combine:
+
+\begin{itemize}
+\item diffusion (propagation),
+\item dissipation (relaxation),
+\item nonlinear saturation (stability),
+\item phase organization (coherence),
+\item and feedback (non-equilibrium dynamics).
+\end{itemize}
+
+This combination is sufficient to generate:
+
+\begin{itemize}
+\item wave-like sectors,
+\item flux-based interactions,
+\item curvature-like geometry,
+\item thermodynamic behavior,
+\item and boundary radiation effects.
+\end{itemize}
+
+The next section introduces a generating functional formulation, allowing these equations to be derived from an action-like principle.
+
+\section{Generating Functional and Action Principle}
+
+A central goal of any unifying physical framework is to express its dynamics in terms of a generating functional, typically an action, from which evolution equations can be derived.
+
+In the OMM--SBT framework, this objective is approached in two complementary ways:
+\begin{itemize}
+\item a standard variational formulation, inspired by classical field theory,
+\item and an extended non-equilibrium functional incorporating feedback and kinetic effects.
+\end{itemize}
+
+\subsection{Classical-Inspired Energy Functional}
+
+We begin with a classical energy-like functional for the amplitude field $X$:
+
+\begin{equation}
+E[X]
+=
+\int d^3x \,
+\left[
+\frac{D}{2} |\nabla X|^2
++
+\frac{\gamma}{2} X^2
++
+\frac{\lambda}{4} X^4
++
+\frac{\mu}{2}(\|X\|^2 - 1)^2
+\right].
+\end{equation}
+
+Each term has a clear physical interpretation:
+
+\begin{itemize}
+\item $\frac{D}{2} |\nabla X|^2$ : spatial gradient energy, governing diffusion and propagation;
+\item $\frac{\gamma}{2} X^2$ : mass-like or damping term;
+\item $\frac{\lambda}{4} X^4$ : nonlinear saturation, stabilizing the dynamics;
+\item $\frac{\mu}{2}(\|X\|^2 - 1)^2$ : global constraint enforcing finite substrate behavior.
+\end{itemize}
+
+The dynamics of $X$ can be interpreted as a gradient flow:
+
+\begin{equation}
+\partial_t X \approx - \frac{\delta E}{\delta X}.
+\end{equation}
+
+However, this description alone is insufficient, as it does not include phase dynamics, flux structures, or feedback.
+
+\subsection{Inclusion of Phase and Flux Contributions}
+
+To incorporate directional and propagation effects, we extend the functional by including the phase field:
+
+\begin{equation}
+E[X,\Phi]
+=
+E[X]
++
+\int d^3x \,
+\left[
+\frac{\alpha}{2} |\nabla \Phi|^2
++
+\chi |X||\nabla \Phi|
+\right].
+\end{equation}
+
+Here:
+
+\begin{itemize}
+\item $\frac{\alpha}{2} |\nabla \Phi|^2$ promotes phase smoothness and coherence;
+\item $\chi |X||\nabla \Phi|$ couples amplitude and phase, generating the flux structure $J = |X|\nabla \Phi$.
+\end{itemize}
+
+This term introduces propagation pathways and is directly related to Maxwell-like behavior.
+
+\subsection{Extended Functional with Kinetic Feedback}
+
+A defining feature of OMM--SBT is the presence of kinetic feedback. This requires extending the functional beyond equilibrium descriptions.
+
+We define a generalized functional:
+
+\begin{equation}
+\mathcal{A}[X,\Phi,K]
+=
+\int dt \, d^3x \,
+\left[
+\mathcal{L}_{\rm core}
++
+\mathcal{L}_{\rm flux}
++
+\mathcal{L}_{\rm kinetic}
++
+\mathcal{L}_{\rm feedback}
+\right].
+\end{equation}
+
+The different contributions are:
+
+\subsubsection{Core Lagrangian}
+
+\begin{equation}
+\mathcal{L}_{\rm core}
+=
+\frac{D}{2} |\nabla X|^2
++
+\frac{\gamma}{2} X^2
++
+\frac{\lambda}{4} X^4.
+\end{equation}
+
+\subsubsection{Flux and Phase Contribution}
+
+\begin{equation}
+\mathcal{L}_{\rm flux}
+=
+\frac{\alpha}{2} |\nabla \Phi|^2
++
+\chi |X||\nabla \Phi|.
+\end{equation}
+
+\subsubsection{Kinetic Contribution}
+
+\begin{equation}
+\mathcal{L}_{\rm kinetic}
+=
+\frac{\kappa}{2} |\nabla K|^2
++
+\frac{\delta}{2} K^2.
+\end{equation}
+
+This term controls the spatial distribution and relaxation of kinetic activity.
+
+\subsubsection{Feedback Contribution}
+
+\begin{equation}
+\mathcal{L}_{\rm feedback}
+=
+\eta_K K \, P(J,W,H,R).
+\end{equation}
+
+This term is non-standard and represents the key innovation of the framework. It encodes the fact that dynamical consequences (flux, vorticity, horizon, radiation) actively influence the substrate.
+
+\subsection{Non-Equilibrium Character of the Action}
+
+Unlike standard field theories, the functional $\mathcal{A}$ is not purely variational in the classical sense. The presence of feedback implies that:
+
+\begin{itemize}
+\item the system is intrinsically non-equilibrium,
+\item the evolution cannot be fully reduced to a stationary action principle,
+\item additional dynamical rules (as given in Section 5) are required.
+\end{itemize}
+
+Thus, $\mathcal{A}$ should be interpreted as a \emph{generating functional} rather than a strict least-action principle.
+
+\subsection{Relation to the Dynamical Equations}
+
+The equations of motion presented in Section 5 can be interpreted as:
+
+\begin{itemize}
+\item gradient flows of $\mathcal{A}$ for the conservative terms,
+\item augmented by explicit non-variational contributions for feedback and noise.
+\end{itemize}
+
+Symbolically:
+
+\begin{equation}
+\partial_t \Psi
+=
+- \frac{\delta \mathcal{A}}{\delta \Psi}
++
+\text{non-variational terms}.
+\end{equation}
+
+This structure is typical of driven dissipative systems and aligns with modern formulations of non-equilibrium field theory.
+
+\subsection{Minimal Generating Structure}
+
+A minimal version of the generating structure can be written as:
+
+\begin{equation}
+\mathcal{A}_{\rm min}
+=
+\int dt \, d^3x \,
+\left[
+\frac{D}{2} |\nabla X|^2
++
+\frac{\gamma}{2} X^2
++
+\frac{\lambda}{4} X^4
+\right].
+\end{equation}
+
+This minimal form generates the core dynamics of $X$, but does not include:
+
+\begin{itemize}
+\item phase structure,
+\item feedback,
+\item thermodynamics,
+\item or geometry.
+\end{itemize}
+
+\subsection{Interpretative Summary}
+
+The OMM--SBT action framework combines:
+
+\begin{itemize}
+\item classical energy-based structure,
+\item phase-induced propagation,
+\item kinetic accumulation,
+\item and feedback-driven non-equilibrium dynamics.
+\end{itemize}
+
+This hybrid formulation allows the model to:
+\begin{itemize}
+\item reproduce known physical behaviors,
+\item remain compatible with field-theoretic intuition,
+\item and extend beyond equilibrium-based theories.
+\end{itemize}
+
+The next sections show how structured physical phenomena emerge from this dynamical system.
+
+\section{Emergent Structures and Particle Interpretation}
+
+The OMM--SBT framework does not assume particles as primitive entities. Instead, all observable structures emerge dynamically from the coupled evolution of the amplitude field $X$, the phase field $\Phi$, and the kinetic field $K$.
+
+\subsection{Wave Mantles and Distributed Structures}
+
+The primary structural element is the \emph{wave mantle}, defined as a spatially extended region of coherent amplitude:
+\begin{equation}
+|X(x,t)| \gg \langle |X| \rangle,
+\end{equation}
+with structured phase gradients.
+
+Wave mantles:
+\begin{itemize}
+\item are diffuse and boundary-less,
+\item evolve continuously,
+\item carry both energy and orientation through $(X,\Phi)$.
+\end{itemize}
+
+\subsection{Diffuse Interaction Rings}
+
+When mantles overlap, they form diffuse interaction regions rather than sharp interfaces.
+
+We define:
+\begin{equation}
+\mathcal{R}_{\rm int} = \{ x \mid \text{mantle overlap and flux convergence} \}.
+\end{equation}
+
+These regions:
+\begin{itemize}
+\item have finite and variable thickness,
+\item are dynamically modulated,
+\item can be asymmetric depending on global configuration.
+\end{itemize}
+
+They constitute \textbf{diffuse interaction rings}.
+
+\subsection{Proto-Particles as Energetic Stabilizations}
+
+A key refinement is that particles are not mantles themselves.
+
+Instead:
+\begin{equation}
+\text{particle} \;\approx\; \text{localized energetic stabilization within a diffuse interaction ring}.
+\end{equation}
+
+These arise when:
+\begin{itemize}
+\item flux $J$ converges,
+\item vorticity $W$ is significant,
+\item kinetic feedback $K$ stabilizes the configuration.
+\end{itemize}
+
+This explains:
+\begin{itemize}
+\item apparent localization,
+\item discrete energy levels,
+\item persistence over time.
+\end{itemize}
+
+\subsection{Flux Skeleton and Propagation Channels}
+
+The flux field:
+\begin{equation}
+J = |X| \nabla \Phi,
+\end{equation}
+defines a propagation skeleton.
+
+It acts as:
+\begin{itemize}
+\item a transport network,
+\item a preferred direction for energy flow,
+\item the basis of Maxwell-like behavior.
+\end{itemize}
+
+\subsection{Vorticity, Spirals, and Chirality}
+
+The vorticity field:
+\begin{equation}
+W = \nabla \times J,
+\end{equation}
+generates rotational structures such as spirals and loops.
+
+This leads to:
+\begin{itemize}
+\item chirality,
+\item rotational stability,
+\item Dirac/Pauli-like behavior.
+\end{itemize}
+
+\subsection{Multi-Scale and Fractal Features}
+
+Nonlinear coupling and feedback produce multi-scale structures:
+\begin{itemize}
+\item hierarchical organization,
+\item fractal-like roughness,
+\item cascade processes.
+\end{itemize}
+
+\subsection{Asymmetry and Context Dependence}
+
+Structures are generally asymmetric:
+\begin{equation}
+\nabla X(x) \neq -\nabla X(-x).
+\end{equation}
+
+Their form depends on:
+\begin{itemize}
+\item flux configuration,
+\item neighboring mantles,
+\item kinetic feedback,
+\item boundary conditions.
+\end{itemize}
+
+\subsection{Boundary Effects and Hidden Domains}
+
+Two types of boundaries exist:
+\begin{itemize}
+\item internal mantle boundaries (unobservable interiors),
+\item global substrate boundaries (finite-size effects).
+\end{itemize}
+
+Thus:
+\begin{equation}
+\text{observed physics} = \text{boundary-constrained projection of the substrate}.
+\end{equation}
+
+\subsection{Radiative Structures}
+
+Boundary regions generate radiation:
+\begin{equation}
+R = R(H,J,W,K),
+\end{equation}
+leading to:
+\begin{itemize}
+\item energy emission,
+\item redistribution of kinetic activity,
+\item Hawking-like behavior.
+\end{itemize}
+
+\subsection{Interpretative Summary}
+
+In OMM--SBT:
+\begin{itemize}
+\item mantles are fundamental,
+\item interaction rings define structural interfaces,
+\item particles are stabilized energy patterns,
+\item matter is emergent,
+\item geometry and interactions arise from structure and flux.
+\end{itemize}
+
+\section{Effective Geometry and Relativistic Behavior}
+
+In the OMM--SBT framework, geometry is not assumed as a fundamental structure. Instead, it emerges from the organization of the underlying fields $(X, \Phi, K)$.
+
+This section formalizes how effective geometry and relativistic behavior arise from the substrate dynamics.
+
+\subsection{Energy Density and Effective Geometry}
+
+We define an effective density:
+\begin{equation}
+\rho_{\rm eff} = X^2 + \alpha K,
+\end{equation}
+where:
+\begin{itemize}
+\item $X$ is the mantle amplitude,
+\item $K$ is the substrate kinetic field,
+\item $\alpha$ is a coupling coefficient.
+\end{itemize}
+
+This density captures both structural amplitude and kinetic agitation.
+
+The effective metric is then defined as:
+\begin{equation}
+g_{\rm eff} = 1 + a \rho_{\rm eff} + b |\nabla^2 X| + c |W| + d |J| + e K.
+\end{equation}
+
+Each term contributes as follows:
+\begin{itemize}
+\item $\rho_{\rm eff}$: energy density contribution,
+\item $|\nabla^2 X|$: curvature of the mantle,
+\item $|W|$: vorticity (rotational structure),
+\item $|J|$: flux intensity,
+\item $K$: kinetic feedback from the substrate.
+\end{itemize}
+
+\subsection{Emergent Curvature}
+
+Spatial variations of $g_{\rm eff}$ define an effective curvature:
+\begin{equation}
+\mathcal{C}(x) \sim \nabla^2 g_{\rm eff}(x).
+\end{equation}
+
+Regions of high curvature correspond to:
+\begin{itemize}
+\item strong interactions,
+\item dense mantle overlap,
+\item high kinetic activity.
+\end{itemize}
+
+This provides an emergent analogue to gravitational curvature.
+
+\subsection{Relativistic Deformation as Structural Distortion}
+
+In this framework, relativistic effects correspond to deformations of the mantle structure and flux organization.
+
+Specifically:
+\begin{itemize}
+\item time dilation emerges from slowed evolution of $X$ and $\Phi$ in high-density regions,
+\item length contraction corresponds to anisotropic compression of flux pathways,
+\item mass corresponds to stabilized energy concentrations in interaction regions.
+\end{itemize}
+
+Thus:
+\begin{equation}
+\text{relativity} \;\approx\; \text{structural response of the substrate to energy concentration}.
+\end{equation}
+
+\subsection{Causal Structure and Horizons}
+
+The finite nature of the substrate introduces causal boundaries defined by:
+\begin{equation}
+H = \{ x \mid g_{\rm eff}(x) > q_\theta(g_{\rm eff}) \}.
+\end{equation}
+
+These horizons:
+\begin{itemize}
+\item separate accessible and inaccessible regions,
+\item define causal limits of propagation,
+\item correspond to effective horizons similar to black hole boundaries.
+\end{itemize}
+
+\subsection{Radiation from Boundary Dynamics}
+
+At these boundaries, the system generates radiation through imbalance between interior and exterior dynamics:
+\begin{equation}
+R = f(H, J, W, K).
+\end{equation}
+
+This leads to:
+\begin{itemize}
+\item Hawking-like radiation,
+\item energy leakage from confined regions,
+\item redistribution of kinetic energy.
+\end{itemize}
+
+\subsection{Particle Interpretation Revisited}
+
+In light of the structural framework, particles are not primitive objects.
+
+Instead:
+\begin{equation}
+\text{particle} \approx \text{localized energetic stabilization within diffuse interaction rings}.
+\end{equation}
+
+These occur at:
+\begin{itemize}
+\item intersections of wave mantles,
+\item regions of high flux convergence,
+\item zones of enhanced vorticity and kinetic feedback.
+\end{itemize}
+
+This explains:
+\begin{itemize}
+\item apparent localization,
+\item discrete energy levels,
+\item interaction-dependent properties.
+\end{itemize}
+
+\subsection{Observability and Hidden Structure}
+
+Due to boundary effects:
+\begin{itemize}
+\item inner mantle structure is not directly observable,
+\item global substrate structure beyond the observable domain is inaccessible,
+\item physical measurements correspond to boundary projections.
+\end{itemize}
+
+Thus:
+\begin{equation}
+\text{observed geometry} = \text{effective projection of a deeper dynamic substrate}.
+\end{equation}
+
+\subsection{Interpretative Summary}
+
+In OMM--SBT:
+\begin{itemize}
+\item geometry is emergent,
+\item curvature is induced by energy organization,
+\item relativity is a dynamical structural effect,
+\item horizons arise from finite-size constraints,
+\item particles are interaction-localized energy phenomena.
+\end{itemize}
+
+This establishes a unified interpretation of geometry, matter, and interaction within a single dynamical framework.
+
+\section{Horizons and Boundary Effects}
+
+In OMM--SBT, horizons are not introduced as fundamental spacetime surfaces. They emerge from finite-size constraints and from extreme values of the effective geometry.
+
+We define a horizon-like region as:
+\[
+H = \{x \mid g_{\rm eff}(x) > q_\theta(g_{\rm eff})\}.
+\]
+
+Such regions behave as causal boundaries because propagation, feedback, and radiation are modified near them.
+
+Boundary effects appear at two levels:
+\begin{itemize}
+\item local mantle boundaries, associated with interaction rings;
+\item global substrate boundaries, associated with the finite observable domain.
+\end{itemize}
+
+Thus, observed physics corresponds to a boundary-constrained projection of the deeper substrate:
+\[
+\text{observed physics}
+=
+\text{projection of substrate dynamics through accessible boundaries}.
+\]
+
+Radiation-like behavior appears when kinetic activity, flux, and curvature become imbalanced across a boundary:
+\[
+R = R(H,J,W,K).
+\]
+
+This provides the basis for Hawking-like behavior in the model.
+
+\section{Generalized Continuity}
+
+Because OMM--SBT includes global normalization, finite-size constraints, and consequence-to-substrate feedback, local conservation is not expected to take the classical form
+\[
+\Delta_t \rho + \nabla \cdot J = 0.
+\]
+
+Instead, the model predicts a generalized continuity relation:
+\[
+\Delta_t \rho_{\rm eff}
++
+\nabla \cdot J_{\rm eff}
+=
+S_{\rm total}.
+\]
+
+Here,
+\[
+\rho_{\rm eff}=X^2+\alpha_K K
+\]
+is the effective density, while
+\[
+J_{\rm eff}=|X|\nabla\Phi+\beta_K\nabla K
+\]
+is the effective current.
+
+The source term is decomposed as:
+\[
+S_{\rm total}
+=
+S_{\rm norm}
++
+S_{\rm feedback}
++
+S_{\rm boundary}
++
+S_K
++
+S_W
++
+S_J
++
+S_R.
+\]
+
+This term does not represent arbitrary violation of conservation. Rather, it encodes the fact that local dynamics are embedded in a globally constrained substrate.
+
+Thus, conservation is generalized:
+\[
+\text{local non-conservation}
+\quad \leftrightarrow \quad
+\text{global constrained conservation}.
+\]
+
+This is one of the central structural predictions of OMM--SBT.
+
+\section{Thermodynamics and Arrow of Time}
+
+Thermodynamic behavior in the OMM--SBT framework arises from the kinetic structure of the substrate and its interaction with emergent fields.
+
+\subsection{Substrate Kinetics}
+
+We introduce a kinetic field $K(x,t)$ representing local agitation of the substrate.
+
+This field:
+\begin{itemize}
+\item stores the cumulative effect of interactions,
+\item evolves through diffusion and dissipation,
+\item feeds back into the dynamics of $X$ and $\Phi$.
+\end{itemize}
+
+Its evolution is given by:
+\begin{equation}
+K_{t+1} = K_t + \kappa \nabla^2 K_t - \delta K_t + P(J,W,H,R),
+\end{equation}
+where $P$ encodes feedback from flux, vorticity, horizons, and radiation.
+
+\subsection{Effective Temperature}
+
+We define an effective temperature as:
+\begin{equation}
+T_{\rm eff} \propto K.
+\end{equation}
+
+This reflects:
+\begin{itemize}
+\item local agitation,
+\item interaction intensity,
+\item energy redistribution.
+\end{itemize}
+
+\subsection{Entropy as Distribution of Kinetic Activity}
+
+Entropy is interpreted as the spread of kinetic activity across the substrate.
+
+We define:
+\begin{equation}
+S \sim \int K(x,t)\,\log K(x,t)\,dx.
+\end{equation}
+
+This captures:
+\begin{itemize}
+\item dispersion of energy,
+\item loss of localization,
+\item increase of configurational complexity.
+\end{itemize}
+
+\subsection{Non-Equilibrium Dynamics}
+
+The system is fundamentally out of equilibrium due to:
+\begin{itemize}
+\item continuous excitation (battement substantiel),
+\item feedback from emergent structures,
+\item boundary effects (finite substrate).
+\end{itemize}
+
+Thus:
+\begin{equation}
+\text{equilibrium} \;\text{is never fully reached}.
+\end{equation}
+
+\subsection{Arrow of Time}
+
+The arrow of time emerges from:
+\begin{itemize}
+\item irreversible redistribution of $K$,
+\item accumulation of feedback,
+\item asymmetry in boundary interactions.
+\end{itemize}
+
+Formally:
+\begin{equation}
+\frac{dS}{dt} \ge 0.
+\end{equation}
+
+This is not imposed but emerges from:
+\begin{itemize}
+\item dissipation,
+\item diffusion,
+\item feedback loops.
+\end{itemize}
+
+\subsection{Thermodynamic Origin of Radiation}
+
+Radiation arises from imbalances at causal boundaries:
+\begin{equation}
+R = f(H, K, J, W).
+\end{equation}
+
+This leads to:
+\begin{itemize}
+\item energy emission,
+\item entropy increase,
+\item coupling between interior and exterior regions.
+\end{itemize}
+
+This provides a thermodynamic basis for Hawking-like radiation.
+
+\subsection{Feedback and Thermodynamic Closure}
+
+A key feature of the model is feedback:
+\begin{equation}
+\text{consequences} \rightarrow K \rightarrow \text{new dynamics}.
+\end{equation}
+
+This creates:
+\begin{itemize}
+\item self-organized structures,
+\item persistent non-equilibrium states,
+\item thermodynamic loops.
+\end{itemize}
+
+\subsection{Interpretative Summary}
+
+In OMM--SBT:
+\begin{itemize}
+\item temperature is kinetic agitation,
+\item entropy is distribution of kinetic activity,
+\item time asymmetry emerges from feedback and dissipation,
+\item radiation is a boundary thermodynamic effect,
+\item thermodynamics is intrinsic to the dynamics, not an added layer.
+\end{itemize}
+
+\section{Derivation of Physical Sectors}
+
+One of the central claims of the OMM--SBT framework is that distinct physical theories arise as limiting regimes of a single underlying causal-kinetic substrate.
+
+In this section, we show how the main physical sectors emerge from the fundamental fields $(X, \Phi, K)$ and their coupled dynamics.
+
+\subsection{General Strategy}
+
+The derivation of sectors follows a common principle:
+
+\begin{itemize}
+\item identify a dominant regime (diffusion, phase, curvature, boundary, etc.),
+\item simplify the full dynamics accordingly,
+\item extract the effective equation governing observable behavior.
+\end{itemize}
+
+Thus:
+\begin{equation}
+\text{sector} \;\approx\; \text{limiting regime of the full dynamics}.
+\end{equation}
+
+\subsection{Schrödinger-like Sector}
+
+In regimes dominated by diffusion and weak nonlinearity, the amplitude field evolves as:
+\begin{equation}
+X_{t+1} \approx X_t + D \nabla^2 X_t - \gamma X_t.
+\end{equation}
+
+Passing to a continuous limit:
+\begin{equation}
+\partial_t X = D \nabla^2 X - \gamma X.
+\end{equation}
+
+Coupled with the phase field $\Phi$, this leads to wave-like behavior analogous to the Schrödinger equation.
+
+Interpretation:
+\begin{itemize}
+\item $X$ plays the role of amplitude,
+\item $\Phi$ encodes phase evolution,
+\item interference and dispersion arise naturally.
+\end{itemize}
+
+\subsection{Dirac / Pauli-like Sector}
+
+The Dirac-like behavior emerges from orientation and vorticity.
+
+The flux:
+\begin{equation}
+J = |X| \nabla \Phi,
+\end{equation}
+combined with vorticity:
+\begin{equation}
+W = \nabla \times J,
+\end{equation}
+produces chiral, two-component structures.
+
+Interpretation:
+\begin{itemize}
+\item spinor-like behavior arises from orientation dynamics,
+\item chirality is linked to rotational structure,
+\item two-component coupling is encoded in phase-vorticity interaction.
+\end{itemize}
+
+\subsection{Maxwell-like Sector}
+
+The flux field acts as an effective field:
+
+\begin{equation}
+J = |X| \nabla \Phi.
+\end{equation}
+
+In regimes where amplitude varies slowly, we obtain:
+\begin{equation}
+\nabla \cdot J \approx \text{source terms},
+\quad
+\nabla \times J = W.
+\end{equation}
+
+This yields a Maxwell-like structure:
+\begin{itemize}
+\item divergence → charge-like effects,
+\item curl → field circulation,
+\item propagation along flux lines.
+\end{itemize}
+
+\subsection{Einstein-like Sector}
+
+Geometry emerges through the effective metric:
+\begin{equation}
+g_{\rm eff} = 1 + a\rho + b|\nabla^2 X| + c|W| + d|J| + eK.
+\end{equation}
+
+Energy density and structure modify geometry:
+\begin{itemize}
+\item high $|X|$ → effective curvature,
+\item strong vorticity → rotational deformation,
+\item kinetic activity $K$ → dynamic geometry.
+\end{itemize}
+
+Thus:
+\begin{equation}
+\text{geometry} \;\approx\; \text{functional of energy distribution}.
+\end{equation}
+
+\subsection{Thermodynamic Sector}
+
+The kinetic field $K$ encodes agitation:
+\begin{equation}
+K_{t+1} = K_t + \kappa \nabla^2 K_t - \delta K_t + P(J,W,H,R).
+\end{equation}
+
+We identify:
+\begin{equation}
+T_{\rm eff} \propto K.
+\end{equation}
+
+Thus:
+\begin{itemize}
+\item temperature arises from kinetic activity,
+\item entropy corresponds to energy distribution,
+\item dissipation emerges from relaxation terms.
+\end{itemize}
+
+\subsection{Hawking-like and Radiation Sector}
+
+At boundaries defined by:
+\begin{equation}
+H = \{g_{\rm eff} > q_\theta(g_{\rm eff})\},
+\end{equation}
+flux asymmetry produces radiation:
+\begin{equation}
+R = R(H,J,W,K).
+\end{equation}
+
+Interpretation:
+\begin{itemize}
+\item boundary-induced energy emission,
+\item kinetic imbalance across horizons,
+\item analogue of Hawking radiation.
+\end{itemize}
+
+\subsection{String/M-like Sector}
+
+Extended structures arise as low-frequency modes of the mantle field.
+
+These correspond to:
+\begin{itemize}
+\item coherent extended oscillations,
+\item stable filament-like structures,
+\item effective higher-order degrees of freedom.
+\end{itemize}
+
+Thus:
+\begin{equation}
+\text{extended structures} \approx \text{collective modes of } X.
+\end{equation}
+
+\subsection{Unified Interpretation}
+
+All sectors emerge from the same underlying dynamics:
+\begin{equation}
+\Psi_t = (X_t, \Phi_t, K_t).
+\end{equation}
+
+Each physical theory corresponds to:
+\begin{itemize}
+\item a regime of dominance,
+\item a projection of the full dynamics,
+\item a simplification of coupled interactions.
+\end{itemize}
+
+\subsection{Summary}
+
+OMM--SBT provides a unified origin for:
+
+\begin{itemize}
+\item quantum behavior (diffusion + phase),
+\item spinor dynamics (vorticity + orientation),
+\item electromagnetic fields (flux structure),
+\item gravity (emergent geometry),
+\item thermodynamics (kinetic substrate),
+\item radiation (boundary effects),
+\item extended modes (string-like structures).
+\end{itemize}
+
+This supports the interpretation of the framework as a coherent unification of physical sectors.
+
+\section{Validation and Numerical Evidence}
+
+The OMM--SBT framework has been subjected to a progressive numerical validation program, designed to test both internal coherence and correspondence with known physical behaviors.
+
+This section summarizes the validation strategy and key results obtained across multiple iterations of the model.
+
+\subsection{Validation Strategy}
+
+The validation process follows three complementary axes:
+
+\begin{itemize}
+\item \textbf{Calibration}: progressive refinement of model parameters and structures (V1 $\rightarrow$ V116),
+\item \textbf{Independent reproduction}: verification using a separate implementation (V115),
+\item \textbf{Invariance testing}: assessment of fundamental symmetries (V113).
+\end{itemize}
+
+Together, these form a minimal but coherent validation framework.
+
+\subsection{Progressive Calibration (V1 $\rightarrow$ V116)}
+
+The model was iteratively refined through successive versions:
+
+\begin{itemize}
+\item early stages: identification of stable dynamics (flux, vorticity, phase),
+\item intermediate stages: emergence of sector-like behaviors,
+\item advanced stages: introduction of feedback, horizons, and generalized continuity.
+\end{itemize}
+
+Key outcomes include:
+
+\begin{itemize}
+\item stabilization of flux structures,
+\item emergence of vorticity-driven chirality,
+\item formation of effective horizons,
+\item appearance of radiation-like boundary behavior,
+\item convergence toward a unified causal-kinetic structure.
+\end{itemize}
+
+This progressive refinement ensures that the final model is not arbitrarily constructed, but emerges from systematic exploration.
+
+\subsection{Independent Reproduction (V115)}
+
+A crucial validation step consists in reproducing the model using a separate, simplified implementation.
+
+This independent version:
+
+\begin{itemize}
+\item does not reuse the original pipeline,
+\item relies only on core equations,
+\item tests robustness of emergent behavior.
+\end{itemize}
+
+The results show:
+
+\begin{itemize}
+\item $9/9$ axes exhibit robust behavior,
+\item $7/9$ axes reach derived-candidate level,
+\item a consistent core score $\sim 0.84$ across configurations.
+\end{itemize}
+
+These include:
+
+\begin{itemize}
+\item Schrödinger-like behavior (diffusion + phase),
+\item Dirac/Pauli-like structures (vorticity),
+\item Maxwell-like flux organization,
+\item Einstein-like effective geometry,
+\item Hawking-like boundary radiation,
+\item radiation coherence,
+\item partial continuity improvement.
+\end{itemize}
+
+This strongly supports the structural robustness of the model.
+
+\subsection{Invariance Scan (V113)}
+
+Fundamental symmetries were tested through dedicated invariance scans.
+
+The following symmetries show strong validation:
+
+\begin{itemize}
+\item translation invariance,
+\item rotational invariance,
+\item reflection symmetry,
+\item global phase invariance,
+\item local gauge stability,
+\item Lorentz-boost proxy behavior,
+\item Bell-type bounded correlations,
+\item Pauli/spinor-like structure.
+\end{itemize}
+
+Quantitatively:
+
+\begin{equation}
+\text{mean invariance score} \approx 0.94 - 1.00 \quad (\text{strong regime}).
+\end{equation}
+
+One limitation remains:
+
+\begin{itemize}
+\item strict local continuity remains partially violated in naive form,
+\end{itemize}
+
+which motivated the introduction of a generalized continuity equation.
+
+\subsection{Generalized Continuity Validation}
+
+The standard conservation equation:
+\begin{equation}
+\partial_t \rho + \nabla \cdot J = 0
+\end{equation}
+does not hold strictly due to:
+
+\begin{itemize}
+\item global substrate constraints,
+\item boundary effects,
+\item feedback mechanisms.
+\end{itemize}
+
+A generalized form was introduced:
+\begin{equation}
+\Delta_t \rho_{\rm eff} + \nabla \cdot J_{\rm eff} = S_{\rm total}.
+\end{equation}
+
+Validation results indicate:
+
+\begin{itemize}
+\item consistent reduction of local residual errors,
+\item improvement ratios up to $\sim 0.6$,
+\item strong correlation between modeled and observed residuals.
+\end{itemize}
+
+This supports the interpretation of $S_{\rm total}$ as a physically meaningful source term.
+
+\subsection{Thermodynamic and Radiation Validation}
+
+The kinetic field $K$ successfully reproduces:
+
+\begin{itemize}
+\item temperature-like behavior,
+\item entropy distribution patterns,
+\item relaxation dynamics.
+\end{itemize}
+
+Boundary regions produce:
+
+\begin{itemize}
+\item asymmetric flux,
+\item radiation-like emission,
+\item Hawking-like signatures.
+\end{itemize}
+
+These behaviors are robust across parameter variations.
+
+\subsection{Limitations of Current Validation}
+
+Despite strong results, several limitations must be acknowledged:
+
+\begin{itemize}
+\item continuity is not strictly conserved in local form,
+\item analytic closure remains incomplete,
+\item Lorentz invariance is validated only through proxy tests,
+\item thermodynamic sector remains partially derived.
+\end{itemize}
+
+These limitations do not invalidate the framework, but define clear directions for future work.
+
+\subsection{Summary of Validation Results}
+
+The validation program supports the following conclusions:
+
+\begin{itemize}
+\item the model is internally coherent,
+\item emergent structures are robust,
+\item multiple physical sectors arise consistently,
+\item fundamental symmetries are largely respected,
+\item deviations (e.g., continuity) are explainable within the framework.
+\end{itemize}
+
+Overall, the results strongly support the interpretation of OMM--SBT as a viable unified physical framework candidate.
+
+\section{Falsifiable Predictions}
+
+A defining requirement of a physical theory is its ability to produce clear, testable, and potentially falsifiable predictions.
+
+The OMM--SBT framework leads to several such predictions, directly rooted in its core structures: flux $J$, vorticity $W$, kinetic field $K$, and boundary dynamics.
+
+\subsection{Prediction 1: Flux-Driven Anisotropic Propagation}
+
+In OMM--SBT, propagation is structured by the flux field:
+\begin{equation}
+J = |X| \nabla \Phi.
+\end{equation}
+
+Unlike isotropic wave propagation, this defines preferred directions.
+
+\textbf{Prediction:}
+\begin{itemize}
+\item measurable anisotropy in propagation speed or intensity,
+\item alignment of propagation patterns with flux structures,
+\item deviation from isotropic dispersion relations.
+\end{itemize}
+
+\textbf{Falsification criterion:}  
+Strict isotropic propagation in systems where flux structures are expected would contradict the model.
+
+\subsection{Prediction 2: Finite-Width Interaction Regions}
+
+Interactions arise from mantle overlap and flux convergence, forming diffuse regions rather than point-like events.
+
+\textbf{Prediction:}
+\begin{itemize}
+\item interaction zones with finite, measurable thickness,
+\item thickness scaling with field gradients or system energy,
+\item spatially extended collision regions in wave-like systems.
+\end{itemize}
+
+\textbf{Falsification criterion:}  
+Observation of strictly point-like interactions at all accessible scales would challenge the framework.
+
+\subsection{Prediction 3: Kinetic Contribution to Temperature}
+
+Temperature is linked to substrate kinetics:
+\begin{equation}
+T_{\rm eff} \propto K.
+\end{equation}
+
+\textbf{Prediction:}
+\begin{itemize}
+\item correlation between dynamic field activity and effective temperature,
+\item deviations from equilibrium thermodynamics in strongly driven systems,
+\item temperature anomalies linked to structural reconfiguration.
+\end{itemize}
+
+\textbf{Falsification criterion:}  
+Absence of any correlation between dynamic field activity and thermal behavior in non-equilibrium regimes.
+
+\subsection{Prediction 4: Boundary-Induced Radiation}
+
+Finite boundaries (horizons) generate radiation through kinetic imbalance and feedback:
+\begin{equation}
+R = R(H, J, W, K).
+\end{equation}
+
+\textbf{Prediction:}
+\begin{itemize}
+\item energy emission localized at high-curvature or high-gradient boundaries,
+\item dependence of radiation intensity on boundary geometry,
+\item Hawking-like spectra in effective horizon systems.
+\end{itemize}
+
+\textbf{Falsification criterion:}  
+Absence of any boundary-dependent emission in systems with strong confinement or horizon-like structures.
+
+\subsection{Prediction 5: Context-Dependent Particle Stability}
+
+Particles correspond to stabilized energetic configurations within interaction regions.
+
+\textbf{Prediction:}
+\begin{itemize}
+\item stability thresholds depending on flux and vorticity,
+\item sensitivity of particle-like states to environmental perturbations,
+\item disappearance or transformation under structural disruption.
+\end{itemize}
+
+\textbf{Falsification criterion:}  
+Absolute intrinsic stability of particles independent of interaction context.
+
+\subsection{Prediction 6: Vorticity-Induced Chirality and Spin Structures}
+
+The vorticity field:
+\begin{equation}
+W = \nabla \times J
+\end{equation}
+induces rotational and chiral organization.
+
+\textbf{Prediction:}
+\begin{itemize}
+\item emergence of spin-like behavior from rotational flux structures,
+\item chirality linked to vorticity orientation,
+\item correlation between rotational patterns and two-component (spinor-like) dynamics.
+\end{itemize}
+
+\textbf{Falsification criterion:}  
+Complete absence of rotational or chiral structure in systems governed by flux dynamics.
+
+\subsection{Prediction 7: Scale-Coupled (Fractal-Like) Structure Formation}
+
+Nonlinear coupling and feedback generate multi-scale organization.
+
+\textbf{Prediction:}
+\begin{itemize}
+\item hierarchical structures across scales,
+\item scale-dependent roughness or fractal signatures,
+\item cascade-like redistribution of energy.
+\end{itemize}
+
+\textbf{Falsification criterion:}  
+Strict scale independence in systems where nonlinear coupling is dominant.
+
+\subsection{Experimental Outlook}
+
+These predictions can be investigated in:
+
+\begin{itemize}
+\item wave-based analog systems (optical, acoustic, fluid),
+\item nonlinear field simulations,
+\item condensed matter systems with strong collective behavior,
+\item controlled boundary systems (cavities, traps, metamaterials).
+\end{itemize}
+
+The combination of multiple validated predictions would provide strong support for the OMM--SBT framework, while clear violations would allow decisive falsification.
+
+\section{Comparison with Existing Theoretical Frameworks}
+
+The OMM--SBT framework proposes a unified description of physical phenomena based on a dynamical substrate composed of amplitude, phase, and kinetic fields.
+
+This section compares the framework with major existing theories, highlighting both correspondences and differences.
+
+\subsection{Comparison with Quantum Mechanics}
+
+In standard quantum mechanics:
+\begin{itemize}
+\item the wavefunction $\psi$ encodes probability amplitudes,
+\item particles exhibit wave-particle duality,
+\item observables arise through measurement.
+\end{itemize}
+
+In OMM--SBT:
+\begin{itemize}
+\item the amplitude field $X$ plays a role analogous to $|\psi|$,
+\item phase $\Phi$ provides directional and dynamical information,
+\item particle-like behavior emerges from localized energy stabilizations.
+\end{itemize}
+
+Key differences:
+\begin{itemize}
+\item no fundamental probabilistic postulate is required,
+\item no collapse mechanism is assumed,
+\item localization arises from dynamics rather than measurement.
+\end{itemize}
+
+\subsection{Comparison with Quantum Field Theory}
+
+Quantum Field Theory (QFT) describes particles as excitations of underlying fields.
+
+OMM--SBT shares this perspective:
+\begin{itemize}
+\item structures are excitations of a continuous substrate,
+\item interactions emerge from field coupling.
+\end{itemize}
+
+However:
+\begin{itemize}
+\item the substrate is explicitly dynamical and finite,
+\item feedback through the kinetic field $K$ is intrinsic,
+\item interaction regions are diffuse rather than point-like.
+\end{itemize}
+
+\subsection{Comparison with General Relativity}
+
+General Relativity (GR) describes gravity as curvature of spacetime.
+
+In OMM--SBT:
+\begin{itemize}
+\item curvature emerges from the effective metric:
+\begin{equation}
+g_{\rm eff} = 1 + a\rho + b|\nabla^2X| + c|W| + d|J| + eK,
+\end{equation}
+\item energy distribution determines geometric deformation,
+\item horizons arise from finite-size constraints.
+\end{itemize}
+
+Key distinction:
+\begin{itemize}
+\item geometry is not fundamental but emergent,
+\item spacetime is replaced by a dynamical substrate,
+\item gravitational effects arise from structural organization.
+\end{itemize}
+
+\subsection{Comparison with Thermodynamics}
+
+Classical thermodynamics treats temperature and entropy as macroscopic quantities.
+
+In OMM--SBT:
+\begin{itemize}
+\item temperature is linked to substrate kinetics:
+\begin{equation}
+T_{\rm eff} \propto K,
+\end{equation}
+\item entropy corresponds to distribution of kinetic activity,
+\item irreversibility emerges from feedback and dissipation.
+\end{itemize}
+
+Thus:
+\begin{itemize}
+\item thermodynamics is not emergent from statistics alone,
+\item it is directly encoded in the dynamics of the substrate.
+\end{itemize}
+
+\subsection{Comparison with String Theory and M-Theory}
+
+String theory models fundamental entities as one-dimensional objects in higher-dimensional spaces.
+
+OMM--SBT differs fundamentally:
+\begin{itemize}
+\item no additional spatial dimensions are required,
+\item extended structures arise as effective modes of the substrate,
+\item string-like behavior emerges from low-frequency mantle structures.
+\end{itemize}
+
+Thus:
+\begin{equation}
+\text{extended structures} \approx \text{kinetic modes, not extra dimensions}.
+\end{equation}
+
+\subsection{Common Ground Across Theories}
+
+Despite differences, several common themes appear:
+
+\begin{itemize}
+\item fields as fundamental entities (QFT, OMM--SBT),
+\item emergence of structure from underlying dynamics,
+\item geometry linked to energy (GR, OMM--SBT),
+\item extended modes (string theory, OMM--SBT).
+\end{itemize}
+
+\subsection{Key Distinctive Features of OMM--SBT}
+
+The framework introduces several original elements:
+
+\begin{itemize}
+\item explicit finite substrate,
+\item intrinsic feedback loop (consequence $\rightarrow$ substrate),
+\item unified description of geometry, matter, and thermodynamics,
+\item absence of primitive particles,
+\item 4D sufficiency without additional dimensions.
+\end{itemize}
+
+\subsection{Interpretative Position}
+
+OMM--SBT can be interpreted as:
+
+\begin{itemize}
+\item a causal-kinetic field theory,
+\item an emergent unification framework,
+\item a candidate bridge between quantum, relativistic, and thermodynamic descriptions.
+\end{itemize}
+
+It does not claim equivalence with existing theories, but rather proposes a unified underlying structure from which they may arise as limits.
+
+\subsection{Summary}
+
+OMM--SBT aligns with established theories at the level of observable phenomena, while differing in its ontological assumptions and dynamical mechanisms.
+
+It replaces:
+\begin{itemize}
+\item particles by interaction-localized energy patterns,
+\item spacetime by an emergent effective geometry,
+\item thermodynamics by intrinsic substrate kinetics.
+\end{itemize}
+
+This positions the framework as a serious candidate for a unified description of physical reality.
+
+\section{Discussion}
+
+The OMM--SBT framework proposes a unified, causal-kinetic description of physical phenomena, in which all observed structures emerge from a common oscillatory substrate.
+
+This section situates the framework with respect to existing theories, clarifies its contributions, and outlines its current limitations.
+
+\subsection{Relation to Quantum Mechanics}
+
+The emergence of Schrödinger-like behavior from diffusion and phase dynamics:
+\begin{equation}
+J = |X| \nabla \Phi
+\end{equation}
+suggests that wave mechanics is not fundamental, but arises as an effective description of underlying field dynamics.
+
+In this perspective:
+\begin{itemize}
+\item the wavefunction corresponds to a reduced description of $(X, \Phi)$,
+\item probabilistic interpretation may reflect unresolved kinetic contributions $K$,
+\item non-local correlations are linked to extended mantle structures.
+\end{itemize}
+
+This provides a potential reinterpretation of quantum mechanics as an emergent statistical framework.
+
+\subsection{Relation to Relativity}
+
+Effective geometry arises from structural properties of the substrate:
+\begin{equation}
+g_{\rm eff} = 1 + a\rho + b|\nabla^2 X| + c|W| + d|J| + eK.
+\end{equation}
+
+This suggests that:
+\begin{itemize}
+\item curvature is not fundamental but emergent,
+\item spacetime geometry reflects field organization,
+\item gravitational effects arise from energy distribution and structure.
+\end{itemize}
+
+While this reproduces Einstein-like behavior, it does not yet constitute a full derivation of General Relativity.
+
+\subsection{Relation to Thermodynamics}
+
+The introduction of the kinetic field $K$ allows a unified treatment of thermodynamics:
+
+\begin{equation}
+T_{\rm eff} \propto K.
+\end{equation}
+
+This leads to:
+\begin{itemize}
+\item a natural description of non-equilibrium systems,
+\item entropy as a structural property of energy distribution,
+\item thermodynamic behavior emerging from feedback dynamics.
+\end{itemize}
+
+However, a full statistical derivation remains an open problem.
+
+\subsection{Relation to Field Theory and Gauge Structures}
+
+The strong invariance results suggest compatibility with field-theoretic structures:
+
+\begin{itemize}
+\item global phase invariance,
+\item local gauge stability,
+\item conservation-like structures (generalized continuity).
+\end{itemize}
+
+The presence of a non-zero source term:
+\begin{equation}
+\Delta_t \rho_{\rm eff} + \nabla \cdot J_{\rm eff} = S_{\rm total}
+\end{equation}
+indicates that conservation laws may be emergent and constrained rather than fundamental.
+
+This departs from standard formulations and requires further formal clarification.
+
+\subsection{Relation to String and M-Theory}
+
+The emergence of extended structures (mantles, flux tubes, rings) provides a natural analogy with string-like objects.
+
+However:
+\begin{itemize}
+\item no extra spatial dimensions are introduced,
+\item extended objects arise dynamically rather than being postulated,
+\item no direct equivalence with Polyakov or Nambu--Goto actions is claimed.
+\end{itemize}
+
+In this sense, OMM--SBT may be interpreted as a lower-dimensional, kinetic realization of extended structures.
+
+\subsection{Conceptual Contributions}
+
+The framework introduces several conceptual shifts:
+
+\begin{itemize}
+\item particles are not fundamental entities,
+\item matter corresponds to stabilized energy configurations,
+\item interactions are diffuse and structured,
+\item causality includes feedback from consequences to substrate.
+\end{itemize}
+
+This leads to a fully relational and dynamic ontology.
+
+\subsection{Limitations and Open Problems}
+
+Despite promising results, several limitations remain:
+
+\begin{itemize}
+\item the generalized continuity equation is not yet fully derived,
+\item analytic closure of the system is incomplete,
+\item Lorentz invariance is supported by proxy tests rather than formal proof,
+\item thermodynamic derivations remain partially empirical,
+\item quantization is not yet rigorously established.
+\end{itemize}
+
+These issues define a clear research program for future work.
+
+\subsection{Position as a ToE Candidate}
+
+The combination of:
+
+\begin{itemize}
+\item unified field description,
+\item emergence of multiple physical sectors,
+\item strong invariance properties,
+\item independent numerical reproduction,
+\end{itemize}
+
+supports the interpretation of OMM--SBT as a serious candidate for an emergent unification framework.
+
+However, the use of the term "Theory of Everything" should remain conditional on:
+
+\begin{itemize}
+\item external validation,
+\item analytic completion,
+\item experimental confirmation.
+\end{itemize}
+
+\subsection{Summary}
+
+OMM--SBT provides a coherent and extensible framework that:
+
+\begin{itemize}
+\item unifies multiple physical phenomena under a single substrate,
+\item reproduces key structural aspects of known theories,
+\item introduces new perspectives on causality, matter, and interaction,
+\item remains open to refinement and verification.
+\end{itemize}
+
+\section{Conclusion}
+
+This work introduces the Oscillatory Mantle Model -- Substantial Beating Theory (OMM--SBT) as a unified causal-kinetic framework for physical phenomena.
+
+The central hypothesis is that all observable structures emerge from a common oscillatory substrate, described by the coupled evolution of amplitude $X$, phase $\Phi$, and kinetic field $K$. Within this framework, particles, interactions, geometry, and thermodynamics are not fundamental entities, but consequences of structured field dynamics.
+
+The model successfully reproduces multiple physical sectors as emergent limits:
+
+\begin{itemize}
+\item wave dynamics consistent with Schrödinger-like behavior,
+\item flux-based propagation analogous to Maxwell theory,
+\item vorticity-driven structures related to Dirac/Pauli features,
+\item effective geometry resembling Einstein-like curvature,
+\item thermodynamic behavior linked to substrate kinetics,
+\item boundary-induced radiation analogous to Hawking processes.
+\end{itemize}
+
+These results are supported by:
+
+\begin{itemize}
+\item progressive calibration across multiple model versions,
+\item strong invariance properties,
+\item and independent numerical reproduction of core behaviors.
+\end{itemize}
+
+A key conceptual contribution of OMM--SBT is the reinterpretation of matter as a stabilized energetic phenomenon arising within diffuse interaction regions, rather than as a fundamental entity. In this view, causality is not strictly unidirectional, but includes feedback from emergent consequences to the underlying substrate.
+
+Despite these advances, several aspects remain incomplete:
+
+\begin{itemize}
+\item analytic closure of the generalized continuity equation,
+\item rigorous derivation of thermodynamic relations,
+\item formal demonstration of Lorentz invariance,
+\item and a complete quantization procedure.
+\end{itemize}
+
+These limitations define a clear path for future work.
+
+From a broader perspective, the OMM--SBT framework suggests that physical laws may not be fundamental constraints imposed on reality, but emergent regularities arising from the organization of a deeper dynamical substrate.
+
+In this sense, the present work should be understood not as a final Theory of Everything, but as a structured and testable candidate for emergent unification.
+
+Its validity ultimately depends on:
+
+\begin{itemize}
+\item external reproduction,
+\item confrontation with experimental observations,
+\item and further analytical development.
+\end{itemize}
+
+If confirmed, this framework would provide a new perspective on the nature of matter, interaction, and spacetime, grounded in a unified causal-kinetic description.
+
+\section*{References}
+
+\begin{thebibliography}{99}
+
+\bibitem{einstein1915}
+A. Einstein,
+\textit{Die Feldgleichungen der Gravitation},
+Sitzungsberichte der Preussischen Akademie der Wissenschaften (1915).
+
+\bibitem{schrodinger1926}
+E. Schrödinger,
+\textit{An Undulatory Theory of the Mechanics of Atoms and Molecules},
+Physical Review, 28 (1926).
+
+\bibitem{dirac1928}
+P. A. M. Dirac,
+\textit{The Quantum Theory of the Electron},
+Proceedings of the Royal Society A, 117 (1928).
+
+\bibitem{maxwell1865}
+J. C. Maxwell,
+\textit{A Dynamical Theory of the Electromagnetic Field},
+Philosophical Transactions of the Royal Society (1865).
+
+\bibitem{hawking1975}
+S. W. Hawking,
+\textit{Particle Creation by Black Holes},
+Communications in Mathematical Physics, 43 (1975).
+
+\bibitem{bell1964}
+J. S. Bell,
+\textit{On the Einstein-Podolsky-Rosen Paradox},
+Physics, 1 (1964).
+
+\bibitem{yangmills1954}
+C. N. Yang and R. L. Mills,
+\textit{Conservation of Isotopic Spin and Isotopic Gauge Invariance},
+Physical Review, 96 (1954).
+
+\bibitem{polyakov1981}
+A. M. Polyakov,
+\textit{Quantum Geometry of Bosonic Strings},
+Physics Letters B, 103 (1981).
+
+\bibitem{nambu1970}
+Y. Nambu,
+\textit{Duality and Hydrodynamics},
+Lecture Notes (1970).
+
+\bibitem{goto1971}
+T. Goto,
+\textit{Relativistic Quantum Mechanics of One-Dimensional Mechanical Continuum},
+Progress of Theoretical Physics (1971).
+
+\bibitem{landaulifshitz}
+L. D. Landau and E. M. Lifshitz,
+\textit{Statistical Physics},
+Pergamon Press.
+
+\bibitem{helmholtz}
+H. von Helmholtz,
+\textit{On Integrals of the Hydrodynamical Equations which Express Vortex-Motion},
+Journal für die reine und angewandte Mathematik (1858).
+
+\bibitem{frisch1995}
+U. Frisch,
+\textit{Turbulence: The Legacy of A. N. Kolmogorov},
+Cambridge University Press (1995).
+
+\bibitem{penrose2004}
+R. Penrose,
+\textit{The Road to Reality},
+Jonathan Cape (2004).
+
+\bibitem{zee2010}
+A. Zee,
+\textit{Quantum Field Theory in a Nutshell},
+Princeton University Press (2010).
+
+\end{thebibliography}
+
+\appendix
+
+\section{Complete Set of Model Equations}
+
+This appendix summarizes the full mathematical structure of the OMM--SBT framework.
+
+\subsection{State Variables}
+
+The complete state of the system is:
+\[
+\Psi_t = (X_t,\Phi_t,K_t),
+\]
+where:
+\begin{itemize}
+\item $X_t$ is the oscillatory mantle amplitude,
+\item $\Phi_t$ is the phase/orientation field,
+\item $K_t$ is the substrate kinetic field.
+\end{itemize}
+
+\subsection{Derived Quantities}
+
+The effective density is:
+\[
+\rho_{\rm eff}=X^2+\alpha_K K.
+\]
+
+The flux skeleton is:
+\[
+J=|X|\nabla\Phi.
+\]
+
+The vorticity is:
+\[
+W=\nabla\times J.
+\]
+
+The curvature proxy is:
+\[
+C=|\nabla^2X|.
+\]
+
+The effective metric is:
+\[
+g_{\rm eff}
+=
+1+a\rho_{\rm eff}+bC+c|W|+d|J|+eK.
+\]
+
+The horizon-like region is:
+\[
+H=\{x\mid g_{\rm eff}(x)>q_\theta(g_{\rm eff})\}.
+\]
+
+The radiation proxy is:
+\[
+R=R(H,J,W,K,C).
+\]
+
+\subsection{Full Discrete Evolution}
+
+The mantle amplitude evolves as:
+\[
+X_{t+1}
+=
+\mathcal N
+\left[
+X_t
++
+D\nabla^2X_t
+-
+\gamma X_t
+-
+\lambda X_t^3
++
+C_{\rm flux}
++
+C_{\rm finite}
++
+\eta_t
+\right].
+\]
+
+The finite-substrate correction is:
+\[
+C_{\rm finite}
+=
+-\mu(\|X_t\|^2-1)X_t.
+\]
+
+The flux correction may be written:
+\[
+C_{\rm flux}
+=
+\chi_1|J_t|+\chi_2\nabla\cdot J_t.
+\]
+
+The phase evolves as:
+\[
+\Phi_{t+1}
+=
+\Phi_t
++
+\alpha\nabla^2\Phi_t
++
+\beta W_t
++
+C_{\rm orient}.
+\]
+
+The substrate kinetic field evolves as:
+\[
+K_{t+1}
+=
+K_t
++
+\kappa\nabla^2K_t
+-
+\delta K_t
++
+P(J_t,W_t,H_t,R_t).
+\]
+
+A typical production term is:
+\[
+P(J,W,H,R)
+=
+\xi_J|J|
++
+\xi_W|W|
++
+\xi_H H
++
+\xi_R R.
+\]
+
+\subsection{Minimal Equation}
+
+The minimal mantle equation is:
+\[
+X_{t+1}
+=
+X_t
++
+D\nabla^2X_t
+-
+\gamma X_t
+-
+\lambda X_t^3.
+\]
+
+This minimal form captures diffusion, dissipation, nonlinear saturation, and attractor formation, but does not include phase, feedback, geometry, or thermodynamics.
+
+\subsection{Continuous Limit}
+
+In the continuous-time limit:
+\[
+\partial_tX
+=
+D\nabla^2X
+-
+\gamma X
+-
+\lambda X^3
++
+C_{\rm flux}
++
+C_{\rm finite}
++
+\eta.
+\]
+
+\[
+\partial_t\Phi
+=
+\alpha\nabla^2\Phi
++
+\beta W
++
+C_{\rm orient}.
+\]
+
+\[
+\partial_tK
+=
+\kappa\nabla^2K
+-
+\delta K
++
+P(J,W,H,R).
+\]
+
+\subsection{Generalized Continuity}
+
+The generalized continuity relation is:
+\[
+\Delta_t\rho_{\rm eff}
++
+\nabla\cdot J_{\rm eff}
+=
+S_{\rm total}.
+\]
+
+The effective current is:
+\[
+J_{\rm eff}
+=
+|X|\nabla\Phi+\beta_K\nabla K.
+\]
+
+The source term is:
+\[
+S_{\rm total}
+=
+S_{\rm norm}
++
+S_{\rm feedback}
++
+S_{\rm boundary}
++
+S_K
++
+S_W
++
+S_J
++
+S_R.
+\]
+
+This expresses local non-conservation induced by global substrate constraints and feedback dynamics.
+
+\subsection{Generating Functional}
+
+A candidate generating functional is:
+\[
+\mathcal A
+=
+\int dt\,d^3x
+\left[
+\frac{D}{2}|\nabla X|^2
++
+\frac{\gamma}{2}X^2
++
+\frac{\lambda}{4}X^4
++
+\frac{\mu}{2}(\|X\|^2-1)^2
++
+\Omega(J,W,H,K)
+\right].
+\]
+
+The additional term $\Omega$ collects flux, vorticity, boundary, and kinetic feedback contributions.
+
+\subsection{Diffuse Interaction Rings}
+
+Diffuse Interaction Rings are defined as interaction regions satisfying:
+\[
+\mathcal R_{\rm int}
+=
+\{x\mid \text{mantle overlap and flux convergence}\}.
+\]
+
+Particle-like structures correspond to:
+\[
+\text{particle}
+\approx
+\text{localized energetic stabilization within } \mathcal R_{\rm int}.
+\]
+
+\section{Reproducibility and Implementation}
+
+This appendix provides the necessary elements to reproduce the results presented in this work.
+
+\subsection{Code Availability}
+
+A complete implementation of the OMM--SBT framework is provided in a public repository:
+
+\begin{itemize}
+\item Repository: \texttt{https://github.com/NicolasGilbertAlbertRoux/omm-sbt-causal-kinetic-framework.git}
+\item Language: Python
+\item Structure: modular scripts for simulation, validation, and analysis
+\end{itemize}
+
+The repository includes:
+
+\begin{itemize}
+\item core evolution equations for $(X, \Phi, K)$,
+\item validation pipelines (V1 to V116),
+\item independent reproduction implementation (V115),
+\item data generation and analysis scripts.
+\end{itemize}
+
+\subsection{Execution Protocol}
+
+A typical execution follows these steps:
+
+\begin{enumerate}
+\item initialize the fields $X$, $\Phi$, and $K$,
+\item run the evolution equations over a fixed number of iterations,
+\item compute derived quantities:
+\begin{itemize}
+\item flux $J$,
+\item vorticity $W$,
+\item effective metric $g_{\rm eff}$,
+\item horizon regions $H$,
+\item radiation indicators $R$,
+\end{itemize}
+\item evaluate sector-specific scores,
+\item aggregate results into validation summaries.
+\end{enumerate}
+
+\subsection{Parameter Configuration}
+
+Typical parameter ranges used in the experiments are:
+
+\begin{itemize}
+\item diffusion coefficient $D \in [0.10, 0.20]$,
+\item damping coefficient $\gamma \in [0.006, 0.012]$,
+\item nonlinear coefficient $\lambda \in [0.02, 0.035]$,
+\item kinetic coupling $\kappa \in [0.08, 0.16]$,
+\item feedback strength $\in [0.02, 0.06]$.
+\end{itemize}
+
+These values are not fine-tuned to a single configuration, but chosen within stable regions of the model.
+
+\subsection{Independent Reproduction}
+
+A simplified implementation is provided to verify that the core results do not depend on the original codebase.
+
+This independent version:
+
+\begin{itemize}
+\item uses minimal equations,
+\item avoids reuse of the main pipeline,
+\item reproduces the main sector behaviors.
+\end{itemize}
+
+This step is essential to ensure robustness and reduce implementation bias.
+
+\subsection{Output and Validation Metrics}
+
+The following metrics are computed:
+
+\begin{itemize}
+\item sector scores (Schrödinger, Dirac, Maxwell, Einstein, etc.),
+\item invariance measures,
+\item continuity residuals,
+\item radiation and boundary indicators,
+\item global coherence metrics.
+\end{itemize}
+
+Results are exported as structured data (CSV files) for analysis.
+
+\subsection{Reproducibility Scope}
+
+All numerical results presented in this work can be reproduced using:
+
+\begin{itemize}
+\item the provided codebase,
+\item the documented parameter ranges,
+\item standard computational resources.
+\end{itemize}
+
+No proprietary tools or inaccessible datasets are required.
+
+\subsection{Limitations}
+
+Reproducibility is currently limited by:
+
+\begin{itemize}
+\item discretization choices,
+\item finite simulation domains,
+\item absence of fully continuous analytic formulation.
+\end{itemize}
+
+These limitations do not affect the qualitative conclusions but may impact precise quantitative values.
+
+\subsection{Future Improvements}
+
+Future work will include:
+
+\begin{itemize}
+\item optimized implementations,
+\item higher-resolution simulations,
+\item standardized benchmarks,
+\item cross-platform validation.
+\end{itemize}
+
+\section{Numerical Protocol}
+
+This appendix details the numerical methodology used to generate and validate the results of the OMM--SBT framework.
+
+\subsection{Discretization}
+
+The system is simulated on a discrete spatial grid:
+\begin{itemize}
+\item lattice size: typically $N = 48$ to $80$,
+\item boundary conditions: periodic or finite (depending on experiment),
+\item spatial operators: finite differences for $\nabla$ and $\nabla^2$.
+\end{itemize}
+
+Time evolution is performed using explicit iteration.
+
+\subsection{Initialization}
+
+Initial conditions are randomly generated or structured:
+
+\begin{itemize}
+\item $X_0$: random or localized distributions,
+\item $\Phi_0$: random phase field,
+\item $K_0$: low-amplitude uniform or noise-based field.
+\end{itemize}
+
+Multiple seeds are used to ensure robustness.
+
+\subsection{Simulation Loop}
+
+Each simulation step includes:
+
+\begin{enumerate}
+\item update of $X$ using diffusion, damping, and nonlinear terms,
+\item update of $\Phi$ via diffusion and vorticity coupling,
+\item computation of derived fields $J$, $W$, $g_{\rm eff}$,
+\item update of kinetic field $K$ with feedback,
+\item normalization (if applicable).
+\end{enumerate}
+
+\subsection{Measurement Procedure}
+
+At each iteration or at convergence:
+
+\begin{itemize}
+\item sector-specific metrics are computed,
+\item invariance scores are evaluated,
+\item continuity residuals are measured,
+\item boundary and radiation indicators are extracted.
+\end{itemize}
+
+\subsection{Statistical Validation}
+
+Each configuration is tested over:
+
+\begin{itemize}
+\item multiple random seeds,
+\item different parameter sets,
+\item varying system sizes.
+\end{itemize}
+
+Results are aggregated using mean, minimum, and success rates.
+
+\subsection{Stability Criteria}
+
+A configuration is considered valid if:
+
+\begin{itemize}
+\item dynamics remain bounded,
+\item structures persist over time,
+\item sector scores exceed defined thresholds.
+\end{itemize}
+
+\subsection{Reproducibility Conditions}
+
+Reproducibility is ensured by:
+
+\begin{itemize}
+\item fixed random seeds,
+\item explicit parameter reporting,
+\item deterministic update rules.
+\end{itemize}
+
+\section{Extended Derivations}
+
+This appendix provides additional derivations supporting the emergence of physical sectors.
+
+\subsection{Flux Structure from Phase Dynamics}
+
+Starting from:
+\[
+\Phi_{t+1} = \Phi_t + \alpha \nabla^2 \Phi_t + \beta W_t,
+\]
+we obtain:
+\[
+J = |X|\nabla \Phi,
+\]
+which defines structured propagation pathways.
+
+\subsection{Vorticity and Spinor Analogy}
+
+The vorticity:
+\[
+W = \nabla \times J
+\]
+naturally generates rotational structures.
+
+These structures exhibit:
+\begin{itemize}
+\item two-component behavior,
+\item chirality,
+\item stability under rotation,
+\end{itemize}
+which supports the analogy with spinor fields.
+
+\subsection{Emergent Geometry}
+
+The effective metric:
+\[
+g_{\rm eff} = 1 + a\rho + b|\nabla^2X| + c|W| + d|J| + eK
+\]
+can be interpreted as a scalar curvature proxy.
+
+Spatial variation of $g_{\rm eff}$ induces:
+
+\begin{itemize}
+\item geodesic-like paths,
+\item effective gravitational behavior,
+\item curvature-dependent propagation.
+\end{itemize}
+
+\subsection{Boundary Radiation Mechanism}
+
+Radiation emerges at regions where:
+\begin{itemize}
+\item $g_{\rm eff}$ is high,
+\item flux gradients are strong,
+\item kinetic imbalance exists.
+\end{itemize}
+
+This produces:
+\[
+R = R(H,J,W,K),
+\]
+which captures boundary emission.
+
+\subsection{Generalized Continuity Origin}
+
+The non-zero source term:
+\[
+S_{\rm total}
+\]
+arises from:
+
+\begin{itemize}
+\item global normalization constraints,
+\item kinetic feedback,
+\item boundary effects.
+\end{itemize}
+
+Thus, conservation laws are effective rather than fundamental.
+
+\end{document}
